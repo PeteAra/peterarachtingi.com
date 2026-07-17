@@ -18,23 +18,13 @@ npm run build
 npm start
 ```
 
-## Deploy (Cloudflare Workers)
+## Deploy (Vercel)
 
-This project uses `@opennextjs/cloudflare`.
+Hosted on Vercel. Domain DNS stays on Cloudflare.
 
-```bash
-npm run deploy
-```
-
-In the Cloudflare dashboard (Workers Builds), use:
-
-- **Build command:** `npm run build` (runs OpenNext + Next.js)
-- **Deploy command:** `npx opennextjs-cloudflare deploy`
-- **Worker name:** `peterarachtingi` (must match `wrangler.jsonc`)
-
-If deploy is still set to `npx wrangler deploy`, that can work after a successful OpenNext build, but `npx opennextjs-cloudflare deploy` is the clearer option.
-
-Then attach the custom domain `peterarachtingi.com` to the Worker.
+1. Push to `main` on GitHub
+2. Vercel builds and deploys automatically
+3. Point `peterarachtingi.com` DNS at Vercel (records from the Vercel domain settings)
 
 ## Customization
 
@@ -46,10 +36,10 @@ Add or edit projects in `src/content/projects.ts` and place screenshots in `publ
 
 Replace placeholder assets:
 
-- `public/images/headshot-placeholder.svg` — professional headshot
+- `public/images/headshot.png` — professional headshot
 - `public/resume.pdf` — your resume
 - `public/og-image.svg` — Open Graph image (1200×630)
-- `public/projects/*/hero.svg` — project screenshots
+- `public/projects/*/hero.png` — project screenshots
 
 ## Tech Stack
 
