@@ -1,0 +1,11 @@
+.section {
+  padding-block: var(--section-padding);
+}
+
+.default {
+  background-color: var(--color-bg);
+}
+
+.elevated {
+  background-color: var(--color-bg-elevated);
+}

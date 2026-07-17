@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#09090b"/>
+  <text x="80" y="140" fill="#3b82f6" font-family="system-ui, sans-serif" font-size="18" font-weight="600">Peter Arachtingi — Software Developer</text>
+  <text x="80" y="230" fill="#fafafa" font-family="system-ui, sans-serif" font-size="48" font-weight="700">Full Stack Developer</text>
+  <text x="80" y="290" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="22">5+ years building production web apps &amp; commercial SaaS</text>
+  <rect x="80" y="340" width="160" height="44" rx="8" fill="#3b82f6"/>
+  <text x="160" y="368" text-anchor="middle" fill="#fafafa" font-family="system-ui, sans-serif" font-size="16" font-weight="600">View Work</text>
+</svg>
