@@ -18,6 +18,22 @@ npm run build
 npm start
 ```
 
+## Deploy (Cloudflare Workers)
+
+This project uses `@opennextjs/cloudflare`.
+
+```bash
+npm run deploy
+```
+
+In the Cloudflare dashboard (Workers Builds), use:
+
+- **Build command:** `npx opennextjs-cloudflare build`
+- **Deploy command:** `npx opennextjs-cloudflare deploy`
+- **Worker name:** `peterarachtingi` (must match `wrangler.jsonc`)
+
+Then attach the custom domain `peterarachtingi.com` to the Worker.
+
 ## Customization
 
 Update your personal details in `src/content/site.ts`:
