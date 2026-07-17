@@ -28,9 +28,11 @@ npm run deploy
 
 In the Cloudflare dashboard (Workers Builds), use:
 
-- **Build command:** `npx opennextjs-cloudflare build`
+- **Build command:** `npm run build` (runs OpenNext + Next.js)
 - **Deploy command:** `npx opennextjs-cloudflare deploy`
 - **Worker name:** `peterarachtingi` (must match `wrangler.jsonc`)
+
+If deploy is still set to `npx wrangler deploy`, that can work after a successful OpenNext build, but `npx opennextjs-cloudflare deploy` is the clearer option.
 
 Then attach the custom domain `peterarachtingi.com` to the Worker.
 
