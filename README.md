@@ -63,4 +63,6 @@ src/
 
 ## Contact Form
 
-The contact form is UI-only in v1. To wire up a backend, integrate Formspree or a Next.js Server Action with Resend in `ContactForm.tsx`.
+The contact form sends messages to `peterara89@gmail.com` via [FormSubmit](https://formsubmit.co).
+
+**First-time setup:** Submit a test message once. FormSubmit will email you a confirmation link — click it to activate delivery. After that, form submissions go straight to your inbox.

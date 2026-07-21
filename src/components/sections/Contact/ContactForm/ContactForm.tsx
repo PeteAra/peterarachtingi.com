@@ -1,20 +1,23 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { Send, CheckCircle } from "lucide-react";
+import { Send, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { sendContactMessage } from "@/app/actions/contact";
 import styles from "./ContactForm.module.css";
 
 interface FormData {
   name: string;
   email: string;
   message: string;
+  company: string;
 }
 
 interface FormErrors {
   name?: string;
   email?: string;
   message?: string;
+  form?: string;
 }
 
 export function ContactForm() {
@@ -22,9 +25,11 @@ export function ContactForm() {
     name: "",
     email: "",
     message: "",
+    company: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
@@ -49,20 +54,43 @@ export function ContactForm() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (validate()) {
+    if (!validate() || isSubmitting) return;
+
+    // Honeypot — bots fill hidden fields; humans leave this empty
+    if (formData.company) {
       setSubmitted(true);
+      return;
     }
+
+    setIsSubmitting(true);
+    setErrors({});
+
+    const result = await sendContactMessage({
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    });
+
+    setIsSubmitting(false);
+
+    if (!result.ok) {
+      setErrors({ form: result.message });
+      return;
+    }
+
+    setSubmitted(true);
   };
 
-  const handleChange = (
-    field: keyof FormData,
-    value: string
-  ) => {
+  const handleChange = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
-    if (errors[field]) {
-      setErrors((prev) => ({ ...prev, [field]: undefined }));
+    if (errors[field as keyof FormErrors] || errors.form) {
+      setErrors((prev) => ({
+        ...prev,
+        [field]: undefined,
+        form: undefined,
+      }));
     }
   };
 
@@ -80,6 +108,19 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className={styles.form} noValidate>
+      <div className={styles.honeypot} aria-hidden="true">
+        <label htmlFor="company">Company</label>
+        <input
+          id="company"
+          type="text"
+          name="company"
+          value={formData.company}
+          onChange={(e) => handleChange("company", e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       <div className={styles.field}>
         <label htmlFor="name" className={styles.label}>
           Name
@@ -94,6 +135,7 @@ export function ContactForm() {
           aria-describedby={errors.name ? "name-error" : undefined}
           aria-invalid={!!errors.name}
           autoComplete="name"
+          disabled={isSubmitting}
         />
         {errors.name && (
           <p id="name-error" className={styles.error} role="alert">
@@ -116,6 +158,7 @@ export function ContactForm() {
           aria-describedby={errors.email ? "email-error" : undefined}
           aria-invalid={!!errors.email}
           autoComplete="email"
+          disabled={isSubmitting}
         />
         {errors.email && (
           <p id="email-error" className={styles.error} role="alert">
@@ -137,6 +180,7 @@ export function ContactForm() {
           className={`${styles.textarea} ${errors.message ? styles.inputError : ""}`}
           aria-describedby={errors.message ? "message-error" : undefined}
           aria-invalid={!!errors.message}
+          disabled={isSubmitting}
         />
         {errors.message && (
           <p id="message-error" className={styles.error} role="alert">
@@ -145,9 +189,29 @@ export function ContactForm() {
         )}
       </div>
 
-      <Button type="submit" variant="primary" className={styles.submit}>
-        Send Message
-        <Send size={16} aria-hidden="true" />
+      {errors.form && (
+        <p className={styles.error} role="alert">
+          {errors.form}
+        </p>
+      )}
+
+      <Button
+        type="submit"
+        variant="primary"
+        className={styles.submit}
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? (
+          <>
+            Sending…
+            <Loader2 size={16} className={styles.spinner} aria-hidden="true" />
+          </>
+        ) : (
+          <>
+            Send Message
+            <Send size={16} aria-hidden="true" />
+          </>
+        )}
       </Button>
     </form>
   );

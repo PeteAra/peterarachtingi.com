@@ -7,7 +7,15 @@ export const projects: Project[] = [
     client: "Michaela Vivant Photography",
     summary:
       "A responsive photography portfolio showcasing portraits, weddings, and boudoir work with pricing and inquiry flow.",
-    technologies: ["React", "JavaScript", "Tailwind CSS", "Vercel"],
+    technologies: [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Router",
+      "EmailJS",
+      "Vercel",
+    ],
     challenges: [
       "Showcasing visual work without slowing the site down",
       "Making pricing and booking inquiries easy for potential clients",
@@ -51,7 +59,14 @@ export const projects: Project[] = [
     client: "Minnehaha Building Maintenance Inc.",
     summary:
       "Modern marketing site for a Twin Cities window cleaning and building maintenance company trusted since 1978.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Lucide React",
+      "Vercel",
+    ],
     challenges: [
       "Replacing an outdated Wix site with a modern, conversion-focused experience",
       "Communicating trust and reliability to commercial property managers",
@@ -91,11 +106,18 @@ export const projects: Project[] = [
   },
   {
     slug: "opera-portfolio",
-    title: "Emma Arachtingi — Opera Portfolio",
-    client: "Emma Arachtingi",
+    title: "Clara Montrose — Opera Portfolio",
+    client: "Clara Montrose",
     summary:
       "An elegant portfolio for a mezzo-soprano, showcasing repertoire, press, and booking information.",
-    technologies: ["Next.js", "TypeScript", "CSS Modules", "Vercel"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "CSS Modules",
+      "Framer Motion",
+      "Lucide React",
+      "Vercel",
+    ],
     challenges: [
       "Conveying artistic sophistication without overwhelming the design",
       "Organizing performance history, press, and booking for different audiences",
@@ -113,9 +135,9 @@ export const projects: Project[] = [
     ],
     image: {
       src: "/projects/opera/hero.png",
-      alt: "Emma Arachtingi opera portfolio website homepage",
-      width: 1024,
-      height: 635,
+      alt: "Clara Montrose opera portfolio website homepage",
+      width: 1280,
+      height: 800,
     },
     links: {
       website: "https://emma-arachtingi.vercel.app",
@@ -124,7 +146,7 @@ export const projects: Project[] = [
     featured: true,
     caseStudy: {
       overview:
-        "Emma Arachtingi needed a digital portfolio that reflects the elegance and sophistication of her craft as a mezzo-soprano — for opera houses, agents, and private event bookers.",
+        "Clara Montrose needed a digital portfolio that reflects the elegance and sophistication of her craft as a mezzo-soprano — for opera houses, agents, and private event bookers.",
       challenge:
         "Performing arts sites often feel generic or overly ornate. This portfolio needed to feel bespoke and artistic while remaining fast, accessible, and easy to navigate.",
       solution:
