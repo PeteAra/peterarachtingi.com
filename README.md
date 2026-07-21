@@ -63,6 +63,10 @@ src/
 
 ## Contact Form
 
-The contact form sends messages to `peterara89@gmail.com` via [FormSubmit](https://formsubmit.co).
+The contact form uses [Web3Forms](https://web3forms.com) and delivers to `peterara89@gmail.com`.
 
-**First-time setup:** Submit a test message once. FormSubmit will email you a confirmation link — click it to activate delivery. After that, form submissions go straight to your inbox.
+1. Go to https://web3forms.com and create an access key for `peterara89@gmail.com`
+2. Add `WEB3FORMS_ACCESS_KEY` in Vercel → Project → Settings → Environment Variables
+3. Redeploy (or push a new commit)
+
+Locally, copy `.env.example` to `.env.local` and paste the same key.

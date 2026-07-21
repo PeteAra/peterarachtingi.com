@@ -35,59 +35,42 @@ export async function sendContactMessage(
     };
   }
 
-  try {
-    const origin =
-      process.env.NEXT_PUBLIC_SITE_URL ??
-      site.url ??
-      "https://peterarachtingi.vercel.app";
+  const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
 
-    const response = await fetch(
-      `https://formsubmit.co/ajax/${encodeURIComponent(site.email)}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          Origin: origin,
-          Referer: `${origin}/`,
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          message,
-          _replyto: email,
-          _subject: `Portfolio contact from ${name}`,
-          _template: "table",
-        }),
-        cache: "no-store",
-      }
-    );
+  if (!accessKey) {
+    return {
+      ok: false,
+      message:
+        "Contact form is not configured yet. Please email me directly at peterara89@gmail.com.",
+    };
+  }
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: accessKey,
+        name,
+        email,
+        message,
+        subject: `Portfolio contact from ${name}`,
+        from_name: "Peter Arachtingi Portfolio",
+        replyto: email,
+        to: site.email,
+      }),
+      cache: "no-store",
+    });
 
     const result = (await response.json()) as {
-      success?: boolean | string;
+      success?: boolean;
       message?: string;
     };
 
-    if (result.success === false || result.success === "false") {
-      const detail = (result.message ?? "").toLowerCase();
-
-      if (detail.includes("activation") || detail.includes("activate")) {
-        return {
-          ok: false,
-          message:
-            "Almost there — FormSubmit emailed peterara89@gmail.com an “Activate Form” link. Click it once, then submit again.",
-        };
-      }
-
-      return {
-        ok: false,
-        message:
-          result.message ||
-          "Unable to send right now. Please email me directly at peterara89@gmail.com.",
-      };
-    }
-
-    if (!response.ok) {
+    if (!response.ok || !result.success) {
       return {
         ok: false,
         message:
