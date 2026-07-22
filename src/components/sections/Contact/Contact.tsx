@@ -10,6 +10,8 @@ import { ContactForm } from "./ContactForm";
 import styles from "./Contact.module.css";
 
 export function Contact() {
+  const accessKey = process.env.WEB3FORMS_ACCESS_KEY ?? "";
+
   return (
     <Section id="contact" aria-labelledby="contact-heading">
       <Container>
@@ -56,7 +58,7 @@ export function Contact() {
             </div>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <ContactForm />
+            <ContactForm accessKey={accessKey} />
           </FadeIn>
         </div>
       </Container>

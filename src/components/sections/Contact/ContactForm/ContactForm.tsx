@@ -9,7 +9,7 @@ interface FormData {
   name: string;
   email: string;
   message: string;
-  company: string;
+  botcheck: boolean;
 }
 
 interface FormErrors {
@@ -19,12 +19,16 @@ interface FormErrors {
   form?: string;
 }
 
-export function ContactForm() {
+interface ContactFormProps {
+  accessKey: string;
+}
+
+export function ContactForm({ accessKey }: ContactFormProps) {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
-    company: "",
+    botcheck: false,
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
@@ -57,7 +61,15 @@ export function ContactForm() {
     e.preventDefault();
     if (!validate() || isSubmitting) return;
 
-    if (formData.company) {
+    if (!accessKey) {
+      setErrors({
+        form: "Contact form is not configured yet. Please email me directly at peterara89@gmail.com.",
+      });
+      return;
+    }
+
+    // Honeypot — bots check this; humans leave it false
+    if (formData.botcheck) {
       setSubmitted(true);
       return;
     }
@@ -66,27 +78,33 @@ export function ContactForm() {
     setErrors({});
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          company: formData.company,
+          access_key: accessKey,
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          message: formData.message.trim(),
+          subject: `Portfolio contact from ${formData.name.trim()}`,
+          from_name: "Peter Arachtingi Portfolio",
+          botcheck: false,
         }),
       });
 
       const result = (await response.json()) as {
-        ok?: boolean;
+        success?: boolean;
         message?: string;
       };
 
-      if (!response.ok || !result.ok) {
+      if (!response.ok || !result.success) {
         setErrors({
           form:
             result.message ||
-            "Unable to send right now. Please email me directly at peterara89@gmail.com.",
+            `Unable to send right now (${response.status}). Please email me directly at peterara89@gmail.com.`,
         });
         return;
       }
@@ -101,7 +119,7 @@ export function ContactForm() {
     }
   };
 
-  const handleChange = (field: keyof FormData, value: string) => {
+  const handleChange = (field: keyof FormData, value: string | boolean) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
     if (errors[field as keyof FormErrors] || errors.form) {
       setErrors((prev) => ({
@@ -127,13 +145,13 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className={styles.form} noValidate>
       <div className={styles.honeypot} aria-hidden="true">
-        <label htmlFor="company">Company</label>
+        <label htmlFor="botcheck">Bot check</label>
         <input
-          id="company"
-          type="text"
-          name="company"
-          value={formData.company}
-          onChange={(e) => handleChange("company", e.target.value)}
+          id="botcheck"
+          type="checkbox"
+          name="botcheck"
+          checked={formData.botcheck}
+          onChange={(e) => handleChange("botcheck", e.target.checked)}
           tabIndex={-1}
           autoComplete="off"
         />
