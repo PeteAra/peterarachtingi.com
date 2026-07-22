@@ -2,7 +2,7 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    slug: "vivant-custom-woodcraft",
+    slug: "michaela-vivant-photography",
     title: "Michaela Vivant Photography",
     client: "Michaela Vivant Photography",
     summary:
@@ -38,7 +38,7 @@ export const projects: Project[] = [
       height: 641,
     },
     links: {
-      website: "https://vivant-photo.vercel.app",
+      website: "https://michaelavivant.com",
       github: "https://github.com/PeteAra/Vivant-Photo",
     },
     featured: true,
@@ -50,7 +50,7 @@ export const projects: Project[] = [
       solution:
         "I handled full delivery — requirements, design, React development with Tailwind, and Vercel deployment — with gallery, pricing, about, and contact sections.",
       results:
-        "The site is live at vivant-photo.vercel.app and supports discovery, pricing review, and direct inquiry from potential clients.",
+        "The site is live at michaelavivant.com and supports discovery, pricing review, and direct inquiry from potential clients.",
     },
   },
   {

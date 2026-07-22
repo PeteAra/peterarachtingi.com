@@ -5,6 +5,15 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/projects/vivant-custom-woodcraft",
+        destination: "/projects/michaela-vivant-photography",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
