@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import { createMetadata } from "@/lib/metadata";
-import { createPersonJsonLd } from "@/lib/json-ld";
+import { createSiteJsonLd } from "@/lib/json-ld";
 import { Navbar } from "@/components/layout/Navbar";
 import "./globals.css";
 
@@ -24,7 +24,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = createPersonJsonLd();
+  const jsonLd = createSiteJsonLd();
 
   return (
     <html lang="en" className={`${inter.variable} ${geistMono.variable}`}>

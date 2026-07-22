@@ -13,7 +13,7 @@ export const site: SiteConfig = {
   linkedin: "https://www.linkedin.com/in/peter-arachtingi-17bbbb353/",
   github: "https://github.com/PeteAra",
   url: "https://peterarachtingi.com",
-  ogImage: "/og-image.svg",
+  ogImage: "/opengraph-image",
 };
 
 export const navLinks: NavLink[] = [

@@ -72,10 +72,14 @@ function HeroGrid({ animated = false }: { animated?: boolean }) {
         </Item>
 
         <Item className={styles.headline} {...fadeUp}>
-          <h1>
+          <h1>{site.name}</h1>
+        </Item>
+
+        <Item className={styles.tagline} {...fadeUp}>
+          <p>
             Full stack developer building{" "}
             <span className={styles.accent}>production</span> software
-          </h1>
+          </p>
         </Item>
 
         <Item className={styles.description} {...fadeUp}>
