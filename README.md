@@ -63,10 +63,8 @@ src/
 
 ## Contact Form
 
-The contact form uses [Web3Forms](https://web3forms.com) and delivers to `peterara89@gmail.com`.
+The contact form posts to `/api/contact`, which forwards messages via [Web3Forms](https://web3forms.com) to `peterara89@gmail.com`.
 
-1. Go to https://web3forms.com and create an access key for `peterara89@gmail.com`
-2. Add `WEB3FORMS_ACCESS_KEY` in Vercel → Project → Settings → Environment Variables
-3. Redeploy (or push a new commit)
-
-Locally, copy `.env.example` to `.env.local` and paste the same key.
+1. Create an access key at https://app.web3forms.com for `peterara89@gmail.com`
+2. Add `WEB3FORMS_ACCESS_KEY` in Vercel → Project → Settings → Environment Variables (Production)
+3. Redeploy after adding or changing the key

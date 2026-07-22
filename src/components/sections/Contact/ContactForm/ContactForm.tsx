@@ -3,7 +3,6 @@
 import { useState, type FormEvent } from "react";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { sendContactMessage } from "@/app/actions/contact";
 import styles from "./ContactForm.module.css";
 
 interface FormData {
@@ -58,7 +57,6 @@ export function ContactForm() {
     e.preventDefault();
     if (!validate() || isSubmitting) return;
 
-    // Honeypot — bots fill hidden fields; humans leave this empty
     if (formData.company) {
       setSubmitted(true);
       return;
@@ -67,20 +65,40 @@ export function ContactForm() {
     setIsSubmitting(true);
     setErrors({});
 
-    const result = await sendContactMessage({
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          company: formData.company,
+        }),
+      });
 
-    setIsSubmitting(false);
+      const result = (await response.json()) as {
+        ok?: boolean;
+        message?: string;
+      };
 
-    if (!result.ok) {
-      setErrors({ form: result.message });
-      return;
+      if (!response.ok || !result.ok) {
+        setErrors({
+          form:
+            result.message ||
+            "Unable to send right now. Please email me directly at peterara89@gmail.com.",
+        });
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setErrors({
+        form: "Unable to reach the email service. Please email me directly at peterara89@gmail.com.",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-
-    setSubmitted(true);
   };
 
   const handleChange = (field: keyof FormData, value: string) => {
