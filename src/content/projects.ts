@@ -2,55 +2,54 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    slug: "michaela-vivant-photography",
-    title: "Michaela Vivant Photography",
-    client: "Michaela Vivant Photography",
+    slug: "vivant-woodcraft",
+    title: "Vivant Custom Woodcraft",
+    client: "Vivant Custom Woodcraft",
     summary:
-      "A responsive photography portfolio showcasing portraits, weddings, and boudoir work with pricing and inquiry flow.",
+      "Luxury marketing site for heirloom cabinetry and architectural millwork, with a design journey configurator and AI design consultant.",
     technologies: [
-      "React",
-      "JavaScript",
+      "Next.js",
+      "TypeScript",
       "Tailwind CSS",
       "Framer Motion",
-      "React Router",
-      "EmailJS",
+      "AI SDK",
       "Vercel",
     ],
     challenges: [
-      "Showcasing visual work without slowing the site down",
-      "Making pricing and booking inquiries easy for potential clients",
-      "Reflecting the photographer's brand personality online",
+      "Conveying quiet luxury and heirloom quality without feeling templated",
+      "Guiding homeowners from inspiration to consultation with clarity",
+      "Pairing a premium brand site with interactive design tools",
     ],
     solutions: [
-      "Clean portfolio gallery with responsive image presentation",
-      "Clear pricing and contact sections for booking inquiries",
-      "Full delivery from requirements through production deployment",
+      "Editorial homepage and portfolio storytelling for Twin Cities residential work",
+      "Design Journey configurator and AI design consultant for material and style exploration",
+      "Next.js marketing site with Framer Motion and a refined craft-focused visual system",
     ],
     results: [
-      "Live client site used for discovery and inquiries",
-      "Professional presence aligned with the photographer's brand",
-      "Strong mobile experience for social traffic",
+      "Live site at vivant-woodcraft.vercel.app",
+      "Clear path from craftsmanship story to design consultation",
+      "Interactive tools that support discovery before booking",
     ],
     image: {
-      src: "/projects/vivant/hero.png",
-      alt: "Michaela Vivant Photography website homepage",
+      src: "/projects/vivant-woodcraft/hero.png",
+      alt: "Vivant Custom Woodcraft homepage — Premium Custom Woodcraft for Distinctive Homes",
       width: 1024,
-      height: 641,
+      height: 567,
     },
     links: {
-      website: "https://michaelavivant.com",
-      github: "https://github.com/PeteAra/Vivant-Photo",
+      website: "https://vivant-woodcraft.vercel.app",
+      github: "https://github.com/PeteAra/vivant-woodcraft",
     },
     featured: true,
     caseStudy: {
       overview:
-        "Michaela Vivant Photography needed a freelance portfolio site to showcase portraits, weddings, and boudoir work while making it easy for clients to explore pricing and inquire.",
+        "Vivant Custom Woodcraft needed a luxury digital presence for bespoke cabinetry and architectural millwork — aimed at homeowners who expect permanence, precision, and quiet luxury.",
       challenge:
-        "Photography sites need to look premium and load quickly. The client also needed clear packages and a simple path to book.",
+        "Custom woodcraft brands often look generic online. This site needed to feel like a private atelier while still converting visitors into design consultations.",
       solution:
-        "I handled full delivery — requirements, design, React development with Tailwind, and Vercel deployment — with gallery, pricing, about, and contact sections.",
+        "I built a Next.js site with TypeScript, Tailwind, and Framer Motion — portfolio storytelling, materials, process, a Design Journey configurator, and an AI design consultant.",
       results:
-        "The site is live at michaelavivant.com and supports discovery, pricing review, and direct inquiry from potential clients.",
+        "The site is live on Vercel with a polished brand experience and interactive tools that guide homeowners toward a private consultation.",
     },
   },
   {
@@ -103,57 +102,6 @@ export const projects: Project[] = [
         "I built Spotra with Next.js, TypeScript, Tailwind, and Supabase: create a workspace calendar, open spots, share the link, and let people claim seats with Google sign-in.",
       results:
         "The product is live at spotra.dev with a focused landing experience and a working path to open a new workspace.",
-    },
-  },
-  {
-    slug: "vivant-woodcraft",
-    title: "Vivant Custom Woodcraft",
-    client: "Vivant Custom Woodcraft",
-    summary:
-      "Luxury marketing site for heirloom cabinetry and architectural millwork, with a design journey configurator and AI design consultant.",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "AI SDK",
-      "Vercel",
-    ],
-    challenges: [
-      "Conveying quiet luxury and heirloom quality without feeling templated",
-      "Guiding homeowners from inspiration to consultation with clarity",
-      "Pairing a premium brand site with interactive design tools",
-    ],
-    solutions: [
-      "Editorial homepage and portfolio storytelling for Twin Cities residential work",
-      "Design Journey configurator and AI design consultant for material and style exploration",
-      "Next.js marketing site with Framer Motion and a refined craft-focused visual system",
-    ],
-    results: [
-      "Live site at vivant-woodcraft.vercel.app",
-      "Clear path from craftsmanship story to design consultation",
-      "Interactive tools that support discovery before booking",
-    ],
-    image: {
-      src: "/projects/vivant-woodcraft/hero.png",
-      alt: "Vivant Custom Woodcraft homepage — Premium Custom Woodcraft for Distinctive Homes",
-      width: 1024,
-      height: 567,
-    },
-    links: {
-      website: "https://vivant-woodcraft.vercel.app",
-      github: "https://github.com/PeteAra/vivant-woodcraft",
-    },
-    featured: true,
-    caseStudy: {
-      overview:
-        "Vivant Custom Woodcraft needed a luxury digital presence for bespoke cabinetry and architectural millwork — aimed at homeowners who expect permanence, precision, and quiet luxury.",
-      challenge:
-        "Custom woodcraft brands often look generic online. This site needed to feel like a private atelier while still converting visitors into design consultations.",
-      solution:
-        "I built a Next.js site with TypeScript, Tailwind, and Framer Motion — portfolio storytelling, materials, process, a Design Journey configurator, and an AI design consultant.",
-      results:
-        "The site is live on Vercel with a polished brand experience and interactive tools that guide homeowners toward a private consultation.",
     },
   },
   {
@@ -256,6 +204,58 @@ export const projects: Project[] = [
         "I built a content-first Next.js site with careful typography, structured performance history, and clear representation and contact paths.",
       results:
         "The portfolio presents a polished professional image with a live production deployment ready to share with booking contacts.",
+    },
+  },
+  {
+    slug: "michaela-vivant-photography",
+    title: "Michaela Vivant Photography",
+    client: "Michaela Vivant Photography",
+    summary:
+      "A responsive photography portfolio showcasing portraits, weddings, and boudoir work with pricing and inquiry flow.",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Router",
+      "EmailJS",
+      "Vercel",
+    ],
+    challenges: [
+      "Showcasing visual work without slowing the site down",
+      "Making pricing and booking inquiries easy for potential clients",
+      "Reflecting the photographer's brand personality online",
+    ],
+    solutions: [
+      "Clean portfolio gallery with responsive image presentation",
+      "Clear pricing and contact sections for booking inquiries",
+      "Full delivery from requirements through production deployment",
+    ],
+    results: [
+      "Live client site used for discovery and inquiries",
+      "Professional presence aligned with the photographer's brand",
+      "Strong mobile experience for social traffic",
+    ],
+    image: {
+      src: "/projects/vivant/hero.png",
+      alt: "Michaela Vivant Photography website homepage",
+      width: 1024,
+      height: 641,
+    },
+    links: {
+      website: "https://michaelavivant.com",
+      github: "https://github.com/PeteAra/Vivant-Photo",
+    },
+    featured: true,
+    caseStudy: {
+      overview:
+        "Michaela Vivant Photography needed a freelance portfolio site to showcase portraits, weddings, and boudoir work while making it easy for clients to explore pricing and inquire.",
+      challenge:
+        "Photography sites need to look premium and load quickly. The client also needed clear packages and a simple path to book.",
+      solution:
+        "I handled full delivery — requirements, design, React development with Tailwind, and Vercel deployment — with gallery, pricing, about, and contact sections.",
+      results:
+        "The site is live at michaelavivant.com and supports discovery, pricing review, and direct inquiry from potential clients.",
     },
   },
 ];

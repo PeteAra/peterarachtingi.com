@@ -20,10 +20,11 @@ export default function Icon() {
           background: "#0a0a0a",
           borderRadius: 8,
           color: "#3b82f6",
-          fontSize: 14,
-          fontWeight: 800,
-          letterSpacing: "-0.06em",
+          fontSize: 18,
+          fontWeight: 900,
+          letterSpacing: "-0.08em",
           fontFamily: "ui-sans-serif, system-ui, sans-serif",
+          lineHeight: 1,
         }}
       >
         PA

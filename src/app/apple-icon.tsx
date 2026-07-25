@@ -20,10 +20,11 @@ export default function AppleIcon() {
           background: "#0a0a0a",
           borderRadius: 40,
           color: "#3b82f6",
-          fontSize: 72,
-          fontWeight: 800,
-          letterSpacing: "-0.06em",
+          fontSize: 96,
+          fontWeight: 900,
+          letterSpacing: "-0.08em",
           fontFamily: "ui-sans-serif, system-ui, sans-serif",
+          lineHeight: 1,
         }}
       >
         PA
