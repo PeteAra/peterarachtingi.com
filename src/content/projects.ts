@@ -54,6 +54,58 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "spotra",
+    title: "Spotra",
+    client: "Spotra",
+    summary:
+      "A simple scheduling app for tutoring, office hours, labs, and appointments — open spots, share a link, let people claim time.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "TanStack Query",
+      "Lucide React",
+      "Vercel",
+    ],
+    challenges: [
+      "Making calendar scheduling feel simple instead of like a setup maze",
+      "Letting hosts open spots and share them without account friction for claimers",
+      "Building a product-ready auth and workspace flow on a modern stack",
+    ],
+    solutions: [
+      "Workspace calendars with open spots and shareable claim links",
+      "Google sign-in for claiming seats without a complicated booking funnel",
+      "Next.js app with Supabase auth/data and a clean product marketing site",
+    ],
+    results: [
+      "Live product at spotra.dev",
+      "Clear path from landing page to opening a workspace",
+      "Lightweight scheduling for tutoring, office hours, labs, and appointments",
+    ],
+    image: {
+      src: "/projects/spotra/hero.png",
+      alt: "Spotra homepage — Open spots. Share the link. Let people claim time.",
+      width: 937,
+      height: 537,
+    },
+    links: {
+      website: "https://spotra.dev",
+      github: "https://github.com/PeteAra/Spotra",
+    },
+    featured: true,
+    caseStudy: {
+      overview:
+        "Spotra is a lightweight scheduling product I built for tutoring, office hours, labs, practice rooms, and appointments — without the usual booking-tool complexity.",
+      challenge:
+        "Most scheduling tools are heavy to set up. Hosts need a fast way to open available time, share one link, and let people claim a spot.",
+      solution:
+        "I built Spotra with Next.js, TypeScript, Tailwind, and Supabase: create a workspace calendar, open spots, share the link, and let people claim seats with Google sign-in.",
+      results:
+        "The product is live at spotra.dev with a focused landing experience and a working path to open a new workspace.",
+    },
+  },
+  {
     slug: "minnehaha-building-maintenance",
     title: "Minnehaha Building Maintenance",
     client: "Minnehaha Building Maintenance Inc.",
