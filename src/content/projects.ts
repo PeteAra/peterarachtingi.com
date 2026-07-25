@@ -106,6 +106,57 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "vivant-woodcraft",
+    title: "Vivant Custom Woodcraft",
+    client: "Vivant Custom Woodcraft",
+    summary:
+      "Luxury marketing site for heirloom cabinetry and architectural millwork, with a design journey configurator and AI design consultant.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "AI SDK",
+      "Vercel",
+    ],
+    challenges: [
+      "Conveying quiet luxury and heirloom quality without feeling templated",
+      "Guiding homeowners from inspiration to consultation with clarity",
+      "Pairing a premium brand site with interactive design tools",
+    ],
+    solutions: [
+      "Editorial homepage and portfolio storytelling for Twin Cities residential work",
+      "Design Journey configurator and AI design consultant for material and style exploration",
+      "Next.js marketing site with Framer Motion and a refined craft-focused visual system",
+    ],
+    results: [
+      "Live site at vivant-woodcraft.vercel.app",
+      "Clear path from craftsmanship story to design consultation",
+      "Interactive tools that support discovery before booking",
+    ],
+    image: {
+      src: "/projects/vivant-woodcraft/hero.png",
+      alt: "Vivant Custom Woodcraft homepage — Premium Custom Woodcraft for Distinctive Homes",
+      width: 1024,
+      height: 567,
+    },
+    links: {
+      website: "https://vivant-woodcraft.vercel.app",
+      github: "https://github.com/PeteAra/vivant-woodcraft",
+    },
+    featured: true,
+    caseStudy: {
+      overview:
+        "Vivant Custom Woodcraft needed a luxury digital presence for bespoke cabinetry and architectural millwork — aimed at homeowners who expect permanence, precision, and quiet luxury.",
+      challenge:
+        "Custom woodcraft brands often look generic online. This site needed to feel like a private atelier while still converting visitors into design consultations.",
+      solution:
+        "I built a Next.js site with TypeScript, Tailwind, and Framer Motion — portfolio storytelling, materials, process, a Design Journey configurator, and an AI design consultant.",
+      results:
+        "The site is live on Vercel with a polished brand experience and interactive tools that guide homeowners toward a private consultation.",
+    },
+  },
+  {
     slug: "minnehaha-building-maintenance",
     title: "Minnehaha Building Maintenance",
     client: "Minnehaha Building Maintenance Inc.",
