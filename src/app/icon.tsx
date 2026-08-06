@@ -20,9 +20,9 @@ export default function Icon() {
           background: "#0a0a0a",
           borderRadius: 8,
           color: "#3b82f6",
-          fontSize: 18,
+          fontSize: 22,
           fontWeight: 900,
-          letterSpacing: "-0.08em",
+          letterSpacing: "-0.1em",
           fontFamily: "ui-sans-serif, system-ui, sans-serif",
           lineHeight: 1,
         }}
