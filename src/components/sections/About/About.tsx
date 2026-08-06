@@ -12,7 +12,7 @@ export function About() {
         <div className={styles.grid}>
           <SectionHeader
             eyebrow="About Me"
-            title="Building software that solves real problems"
+            title="Software that helps businesses grow"
             id="about-heading"
           />
           <FadeIn>
@@ -20,15 +20,15 @@ export function About() {
               <p className={styles.bio}>{site.aboutBio}</p>
               <div className={styles.highlights}>
                 <div className={styles.highlight}>
-                  <span className={styles.highlightValue}>5+ Years</span>
+                  <span className={styles.highlightValue}>Client-focused</span>
                   <span className={styles.highlightLabel}>
-                    Production web applications and commercial SaaS
+                    Websites and products built to convert, not just look good
                   </span>
                 </div>
                 <div className={styles.highlight}>
-                  <span className={styles.highlightValue}>AI-Assisted</span>
+                  <span className={styles.highlightValue}>End-to-end</span>
                   <span className={styles.highlightLabel}>
-                    2+ years building with Cursor and Claude Code
+                    From discovery and design through launch, SEO, and support
                   </span>
                 </div>
               </div>

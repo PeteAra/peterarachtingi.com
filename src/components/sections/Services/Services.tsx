@@ -36,9 +36,14 @@ export function Services() {
         <SectionHeader
           eyebrow="What I Offer"
           title="Services"
-          description="From business websites to production React applications — I deliver polished, performant solutions tailored to your goals."
+          description="Websites and software that help your business get found, look credible, and convert."
           id="services-heading"
         />
+        <p className={styles.audience}>
+          I work with small businesses, local service companies, and founders
+          who need a clear online presence or a focused web product — without
+          the agency overhead.
+        </p>
         <StaggerChildren className={styles.grid}>
           {services.map((service) => {
             const Icon = iconMap[service.icon] ?? Code2;

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check, Sparkles } from "lucide-react";
 import { site } from "@/content/site";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
@@ -67,19 +67,31 @@ function HeroGrid({ animated = false }: { animated?: boolean }) {
   return (
     <div className={styles.grid}>
       <div className={styles.text}>
-        <Item className={styles.eyebrow} {...fadeUp}>
-          <p>{site.title}</p>
-        </Item>
-
         <Item className={styles.headline} {...fadeUp}>
           <h1>{site.name}</h1>
         </Item>
 
+        <Item className={styles.role} {...fadeUp}>
+          <p>{site.title}</p>
+        </Item>
+
         <Item className={styles.tagline} {...fadeUp}>
           <p>
-            Full stack developer building{" "}
-            <span className={styles.accent}>production</span> software
+            Building{" "}
+            <span className={styles.accent}>modern web applications</span>, SaaS
+            products, and AI-powered business solutions.
           </p>
+        </Item>
+
+        <Item className={styles.highlights} {...fadeUp}>
+          <ul className={styles.highlightList}>
+            {site.heroHighlights.map((item) => (
+              <li key={item} className={styles.highlightItem}>
+                <Check size={16} className={styles.check} aria-hidden="true" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </Item>
 
         <Item className={styles.description} {...fadeUp}>
@@ -87,12 +99,16 @@ function HeroGrid({ animated = false }: { animated?: boolean }) {
         </Item>
 
         <Item className={styles.ctas} {...fadeUp}>
-          <Button href="#work" variant="primary">
-            View My Work
+          <Button href="#contact" variant="primary">
+            Start a Project
             <ArrowRight size={16} aria-hidden="true" />
           </Button>
-          <Button href="#contact" variant="secondary">
-            Contact Me
+          <Button href="#work" variant="secondary">
+            View My Work
+          </Button>
+          <Button href="#ai-consultant" variant="ghost">
+            <Sparkles size={16} aria-hidden="true" />
+            Try the AI consultant
           </Button>
         </Item>
       </div>

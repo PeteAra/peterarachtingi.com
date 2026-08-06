@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Peter Arachtingi — Software Developer";
+export const alt = "Peter Arachtingi — Full-Stack Software Developer";
 export const size = {
   width: 1200,
   height: 630,
@@ -32,7 +32,7 @@ export default function OpenGraphImage() {
             marginBottom: 28,
           }}
         >
-          SOFTWARE DEVELOPER
+          FULL-STACK SOFTWARE DEVELOPER
         </div>
         <div
           style={{
@@ -56,7 +56,7 @@ export default function OpenGraphImage() {
             maxWidth: 900,
           }}
         >
-          Full stack developer building production web apps and commercial SaaS
+          Building software that helps businesses grow
         </div>
       </div>
     ),

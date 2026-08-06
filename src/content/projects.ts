@@ -7,6 +7,8 @@ export const projects: Project[] = [
     client: "Michaela Vivant Photography",
     summary:
       "A responsive photography portfolio showcasing portraits, weddings, and boudoir work with pricing and inquiry flow.",
+    outcome:
+      "A photography studio site that turns visitors into booking inquiries.",
     technologies: [
       "React",
       "JavaScript",
@@ -59,6 +61,8 @@ export const projects: Project[] = [
     client: "Spotra",
     summary:
       "A simple scheduling app for tutoring, office hours, labs, and appointments — open spots, share a link, let people claim time.",
+    outcome:
+      "A scheduling product that lets people claim time without the setup maze.",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -111,6 +115,8 @@ export const projects: Project[] = [
     client: "Minnehaha Building Maintenance Inc.",
     summary:
       "Modern marketing site for a Twin Cities window cleaning and building maintenance company trusted since 1978.",
+    outcome:
+      "A service-business site built to convert visitors into estimate requests.",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -162,6 +168,8 @@ export const projects: Project[] = [
     client: "Clara Montrose",
     summary:
       "An elegant portfolio for a mezzo-soprano, showcasing repertoire, press, and booking information.",
+    outcome:
+      "An artist portfolio that helps booking agents and venues learn more fast.",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -213,6 +221,8 @@ export const projects: Project[] = [
     client: "Vivant Custom Woodcraft",
     summary:
       "Luxury marketing site for heirloom cabinetry and architectural millwork, with a design journey configurator and AI design consultant.",
+    outcome:
+      "A luxury brand site that guides homeowners toward design consultations.",
     technologies: [
       "Next.js",
       "TypeScript",

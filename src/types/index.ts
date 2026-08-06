@@ -22,6 +22,7 @@ export interface Project {
   title: string;
   client: string;
   summary: string;
+  outcome: string;
   technologies: string[];
   challenges: string[];
   solutions: string[];
@@ -52,6 +53,8 @@ export interface SiteConfig {
   name: string;
   title: string;
   description: string;
+  heroTagline: string;
+  heroHighlights: string[];
   shortBio: string;
   aboutBio: string;
   email: string;

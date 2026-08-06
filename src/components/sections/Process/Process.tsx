@@ -12,7 +12,7 @@ export function Process() {
         <SectionHeader
           eyebrow="How I Work"
           title="My Process"
-          description="A structured approach that keeps projects on track — from initial discovery through launch and beyond."
+          description="A clear path from first conversation to launch — so you always know what’s next."
           id="process-heading"
         />
         <ol className={styles.timeline} role="list">

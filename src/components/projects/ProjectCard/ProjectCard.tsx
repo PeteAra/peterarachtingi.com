@@ -45,6 +45,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             />
           </div>
           <h3 className={styles.title}>{project.title}</h3>
+          <p className={styles.outcome}>{project.outcome}</p>
           <p className={styles.summary}>{project.summary}</p>
           <div className={styles.tech}>
             {project.technologies.map((tech) => (

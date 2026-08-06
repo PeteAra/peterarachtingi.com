@@ -17,8 +17,8 @@ export function Contact() {
       <Container>
         <SectionHeader
           eyebrow="Get in Touch"
-          title="Let's work together"
-          description="Open to software engineering roles and freelance web projects. Tell me about your project or opportunity."
+          title="Let's build something for your business"
+          description="Tell me about your business and what you need built. I'll follow up with next steps."
           id="contact-heading"
         />
         <div className={styles.grid}>
@@ -52,8 +52,9 @@ export function Contact() {
                 Download Resume
               </Button>
               <p className={styles.cta}>
-                Whether you&apos;re hiring for an engineering role or need a
-                website built for your business — I&apos;d love to hear from you.
+                Need a website that gets found, looks credible, and converts —
+                or a custom web product for your workflows? I&apos;d love to
+                hear about it. Open to engineering roles as well.
               </p>
             </div>
           </FadeIn>

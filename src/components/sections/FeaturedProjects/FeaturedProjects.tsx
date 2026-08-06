@@ -14,7 +14,7 @@ export function FeaturedProjects() {
         <SectionHeader
           eyebrow="Selected Work"
           title="Featured Projects"
-          description="Client websites and product work — click any card to visit the live site."
+          description="Real client and product work — each card highlights the business outcome. Click to visit the live site."
           id="work-heading"
         />
         <div className={styles.grid}>

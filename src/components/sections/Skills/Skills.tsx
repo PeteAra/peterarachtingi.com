@@ -17,7 +17,7 @@ export function Skills() {
         <SectionHeader
           eyebrow="Technical Expertise"
           title="Skills & Tools"
-          description="A focused toolkit built through professional engineering work and client projects."
+          description="The tools behind reliable delivery — useful if you want to know how the work gets built."
           id="skills-heading"
         />
         <StaggerChildren className={styles.grid}>

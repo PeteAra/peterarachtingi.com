@@ -78,6 +78,13 @@
   line-height: 1.3;
 }
 
+.outcome {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--color-text);
+}
+
 .summary {
   color: var(--color-text-muted);
   font-size: var(--text-small);

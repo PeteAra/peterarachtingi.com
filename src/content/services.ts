@@ -8,39 +8,39 @@ export const services: Service[] = [
     icon: "Building2",
   },
   {
-    title: "Portfolio Websites",
-    description:
-      "Showcase your work with elegant, fast-loading portfolio sites tailored to your industry and audience.",
-    icon: "Layout",
-  },
-  {
     title: "Website Modernization",
     description:
       "Transform outdated sites into modern, mobile-friendly experiences without losing your existing content or SEO.",
     icon: "RefreshCw",
   },
   {
-    title: "React Development",
+    title: "SEO Improvements",
     description:
-      "Custom React applications with clean architecture, reusable components, and maintainable codebases.",
-    icon: "Code2",
-  },
-  {
-    title: "Next.js Development",
-    description:
-      "Full-stack Next.js applications with server-side rendering, static generation, and optimal performance.",
-    icon: "Zap",
+      "Technical SEO, structured data, metadata optimization, and content structure so the right customers can find you.",
+    icon: "Search",
   },
   {
     title: "Performance Optimization",
     description:
-      "Audit and improve Core Web Vitals, load times, and user experience for better rankings and conversions.",
+      "Faster load times and better Core Web Vitals — so visitors stay longer and convert more often.",
     icon: "Gauge",
   },
   {
-    title: "SEO Improvements",
+    title: "Portfolio Websites",
     description:
-      "Technical SEO, structured data, metadata optimization, and content structure for search visibility.",
-    icon: "Search",
+      "Showcase your work with elegant, fast-loading portfolio sites tailored to your industry and audience.",
+    icon: "Layout",
+  },
+  {
+    title: "Custom Web Applications",
+    description:
+      "Purpose-built web apps for your workflows — clean architecture, maintainable code, and room to grow.",
+    icon: "Code2",
+  },
+  {
+    title: "Fast, SEO-Ready Web Apps",
+    description:
+      "Full-stack apps that load quickly, rank well, and scale — built with modern frameworks when the job calls for it.",
+    icon: "Zap",
   },
 ];
