@@ -2,60 +2,6 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    slug: "michaela-vivant-photography",
-    title: "Michaela Vivant Photography",
-    client: "Michaela Vivant Photography",
-    summary:
-      "A responsive photography portfolio showcasing portraits, weddings, and boudoir work with pricing and inquiry flow.",
-    outcome:
-      "A photography studio site that turns visitors into booking inquiries.",
-    technologies: [
-      "React",
-      "JavaScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "React Router",
-      "EmailJS",
-      "Vercel",
-    ],
-    challenges: [
-      "Showcasing visual work without slowing the site down",
-      "Making pricing and booking inquiries easy for potential clients",
-      "Reflecting the photographer's brand personality online",
-    ],
-    solutions: [
-      "Clean portfolio gallery with responsive image presentation",
-      "Clear pricing and contact sections for booking inquiries",
-      "Full delivery from requirements through production deployment",
-    ],
-    results: [
-      "Live client site used for discovery and inquiries",
-      "Professional presence aligned with the photographer's brand",
-      "Strong mobile experience for social traffic",
-    ],
-    image: {
-      src: "/projects/vivant/hero.png",
-      alt: "Michaela Vivant Photography website homepage",
-      width: 1024,
-      height: 641,
-    },
-    links: {
-      website: "https://michaelavivant.com",
-      github: "https://github.com/PeteAra/Vivant-Photo",
-    },
-    featured: true,
-    caseStudy: {
-      overview:
-        "Michaela Vivant Photography needed a freelance portfolio site to showcase portraits, weddings, and boudoir work while making it easy for clients to explore pricing and inquire.",
-      challenge:
-        "Photography sites need to look premium and load quickly. The client also needed clear packages and a simple path to book.",
-      solution:
-        "I handled full delivery — requirements, design, React development with Tailwind, and Vercel deployment — with gallery, pricing, about, and contact sections.",
-      results:
-        "The site is live at michaelavivant.com and supports discovery, pricing review, and direct inquiry from potential clients.",
-    },
-  },
-  {
     slug: "spotra",
     title: "Spotra",
     client: "Spotra",
@@ -107,6 +53,60 @@ export const projects: Project[] = [
         "I built Spotra with Next.js, TypeScript, Tailwind, and Supabase: create a workspace calendar, open spots, share the link, and let people claim seats with Google sign-in.",
       results:
         "The product is live at spotra.dev with a focused landing experience and a working path to open a new workspace.",
+    },
+  },
+  {
+    slug: "michaela-vivant-photography",
+    title: "Michaela Vivant Photography",
+    client: "Michaela Vivant Photography",
+    summary:
+      "A responsive photography portfolio showcasing portraits, weddings, and boudoir work with pricing and inquiry flow.",
+    outcome:
+      "A photography studio site that turns visitors into booking inquiries.",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Router",
+      "EmailJS",
+      "Vercel",
+    ],
+    challenges: [
+      "Showcasing visual work without slowing the site down",
+      "Making pricing and booking inquiries easy for potential clients",
+      "Reflecting the photographer's brand personality online",
+    ],
+    solutions: [
+      "Clean portfolio gallery with responsive image presentation",
+      "Clear pricing and contact sections for booking inquiries",
+      "Full delivery from requirements through production deployment",
+    ],
+    results: [
+      "Live client site used for discovery and inquiries",
+      "Professional presence aligned with the photographer's brand",
+      "Strong mobile experience for social traffic",
+    ],
+    image: {
+      src: "/projects/vivant/hero.png",
+      alt: "Michaela Vivant Photography website homepage",
+      width: 1024,
+      height: 641,
+    },
+    links: {
+      website: "https://michaelavivant.com",
+      github: "https://github.com/PeteAra/Vivant-Photo",
+    },
+    featured: true,
+    caseStudy: {
+      overview:
+        "Michaela Vivant Photography needed a freelance portfolio site to showcase portraits, weddings, and boudoir work while making it easy for clients to explore pricing and inquire.",
+      challenge:
+        "Photography sites need to look premium and load quickly. The client also needed clear packages and a simple path to book.",
+      solution:
+        "I handled full delivery — requirements, design, React development with Tailwind, and Vercel deployment — with gallery, pricing, about, and contact sections.",
+      results:
+        "The site is live at michaelavivant.com and supports discovery, pricing review, and direct inquiry from potential clients.",
     },
   },
   {
