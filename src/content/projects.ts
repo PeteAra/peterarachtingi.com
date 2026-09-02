@@ -144,7 +144,7 @@ export const projects: Project[] = [
       src: "/projects/minnehaha/hero.png",
       alt: "Minnehaha Building Maintenance website homepage",
       width: 1024,
-      height: 596,
+      height: 502,
     },
     links: {
       website: "https://minnehaha-building-maintenance.vercel.app",
