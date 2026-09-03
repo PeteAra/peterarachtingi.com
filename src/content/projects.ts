@@ -136,7 +136,7 @@ export const projects: Project[] = [
       "SEO-structured content for local Twin Cities search",
     ],
     results: [
-      "Professional online presence ready for domain cutover",
+      "Live client site at minnehaha-inc.com",
       "Clear conversion path from homepage to contact",
       "Modern stack ready for ongoing content updates",
     ],
@@ -147,7 +147,7 @@ export const projects: Project[] = [
       height: 502,
     },
     links: {
-      website: "https://minnehaha-building-maintenance.vercel.app",
+      website: "https://minnehaha-inc.com",
       github: "https://github.com/PeteAra/minnehaha-building-maintenance",
     },
     featured: true,
@@ -159,7 +159,7 @@ export const projects: Project[] = [
       solution:
         "I designed and built a Next.js marketing site with TypeScript, Tailwind, and Framer Motion. The information architecture prioritizes services, industries, and contact conversion with a mobile-first responsive design.",
       results:
-        "The new site is live on Vercel and ready for domain cutover to mbminc-services.com. It establishes a credible digital presence with a clear path from discovery to free estimate requests.",
+        "The new site is live at minnehaha-inc.com. It establishes a credible digital presence with a clear path from discovery to free estimate requests.",
     },
   },
   {
